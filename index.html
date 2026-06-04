@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dylan From 2045 — Reporting Back From the Future</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%2300d4ff' stroke-width='1' opacity='.4'%3E%3Cpath d='M0 34h64v-34M64 34v44h54v-44h102'/%3E%3Cpath d='M34 220v-56h66v34h74v-66h46'/%3E%3Cpath d='M0 110h34M110 0v34M176 220v-46M0 176h44v-34'/%3E%3Cpath d='M142 78v62h78'/%3E%3C/g%3E%3Cg fill='%2300eaff' opacity='.5'%3E%3Ccircle cx='64' cy='34' r='3'/%3E%3Ccircle cx='118' cy='34' r='3'/%3E%3Ccircle cx='100' cy='78' r='3'/%3E%3Ccircle cx='34' cy='110' r='3'/%3E%3Ccircle cx='174' cy='130' r='3'/%3E%3Ccircle cx='100' cy='164' r='3'/%3E%3Ccircle cx='44' cy='176' r='3'/%3E%3Ccircle cx='142' cy='78' r='3'/%3E%3C/g%3E%3C/svg%3E") repeat,radial-gradient(ellipse at 50% -8%,#0a4ba0 0%,transparent 58%),linear-gradient(160deg,#020a2e 0%,#031b54 45%,#012a6b 100%);background-attachment:fixed;color:#eef0ff;font-family:system-ui,-apple-system,sans-serif;font-weight:500;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:0 16px 56px}
+body::before{content:'';position:fixed;top:0;left:50%;transform:translateX(-50%);width:1000px;height:560px;background:radial-gradient(ellipse at 50% 0%,rgba(0,180,255,.5) 0%,transparent 70%);pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;inset:0;background:linear-gradient(transparent 0%,rgba(2,10,46,.55) 100%);pointer-events:none;z-index:0}
+.wrap{position:relative;z-index:1;width:100%;max-width:760px;display:flex;flex-direction:column;align-items:center;gap:36px}
+
+/* HERO ROW — title left, image right */
+.hero-row{width:100%;display:flex;flex-direction:row;align-items:center;gap:28px;padding:28px 0 8px}
+.title-block{flex:1;display:flex;flex-direction:column;gap:10px}
+h1{font-size:clamp(1.7rem,5.5vw,2.8rem);font-weight:900;letter-spacing:.06em;color:#eafdff;text-shadow:0 0 3px #fff,0 0 8px #00eaff,0 0 18px #00eaff,0 0 36px #00eaffcc,0 0 70px #00eaff66;text-transform:uppercase;animation:neonPulse 3.2s ease-in-out infinite alternate}
+@keyframes neonPulse{from{text-shadow:0 0 3px #fff,0 0 8px #00eaff,0 0 18px #00eaff,0 0 36px #00eaffcc,0 0 70px #00eaff66}to{text-shadow:0 0 4px #fff,0 0 11px #00eaff,0 0 24px #00eaff,0 0 48px #00eaff,0 0 90px #00eaff88}}
+.tagline{font-size:.82rem;font-weight:700;letter-spacing:.28em;color:#ffb3ef;text-transform:uppercase;text-shadow:0 0 4px #fff5fd,0 0 10px #ff2bd6,0 0 22px #ff2bd6}
+
+/* HERO IMAGE — smaller portrait showing full figure */
+.hero-img{width:155px;height:220px;flex-shrink:0;border-radius:12px;overflow:hidden;border:1px solid rgba(0,234,255,.25);box-shadow:0 0 28px rgba(0,234,255,.14),0 0 60px rgba(0,234,255,.06);position:relative}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;background:#050a24}
+.hero-img .placeholder{display:none;width:100%;height:100%;align-items:center;justify-content:center;background:rgba(0,234,255,.05);font-size:.65rem;letter-spacing:.12em;color:rgba(0,234,255,.4);text-transform:uppercase;text-align:center;padding:8px}
+
+/* SECTIONS */
+section{width:100%;display:flex;flex-direction:column;gap:14px}
+.section-label{font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#d9bcff;text-shadow:0 0 8px #9d5bff,0 0 16px #9d5bff66;padding-bottom:2px;border-bottom:1px solid rgba(157,91,255,.45)}
+
+/* BUTTONS */
+.btn-row{display:flex;flex-wrap:wrap;gap:10px}
+a.btn{display:inline-block;padding:9px 22px;border-radius:8px;font-size:.85rem;font-weight:700;letter-spacing:.06em;text-decoration:none;text-transform:uppercase;border:1px solid;transition:box-shadow .2s,background .2s,color .2s}
+a.btn:hover{filter:brightness(1.15)}
+a.btn-m{color:#ff2bd6;border-color:#ff2bd6;background:rgba(255,43,214,.07);text-shadow:0 0 8px #ff2bd666;box-shadow:0 0 8px rgba(255,43,214,.15)}
+a.btn-m:hover{background:rgba(255,43,214,.18);box-shadow:0 0 18px rgba(255,43,214,.5)}
+a.btn-c{color:#00eaff;border-color:#00eaff;background:rgba(0,234,255,.07);text-shadow:0 0 8px #00eaff55;box-shadow:0 0 8px rgba(0,234,255,.12)}
+a.btn-c:hover{background:rgba(0,234,255,.18);box-shadow:0 0 18px rgba(0,234,255,.45)}
+
+/* BOOK CARDS */
+.books-grid{display:flex;flex-direction:column;gap:18px}
+.book-card{border:1px solid rgba(157,91,255,.3);border-radius:12px;padding:18px 20px;background:rgba(157,91,255,.05);box-shadow:0 0 18px rgba(157,91,255,.1);display:flex;flex-direction:row;gap:18px;align-items:flex-start}
+
+/* Book covers — real high-res cover images */
+.book-cover{width:96px;height:144px;flex-shrink:0;border-radius:7px;overflow:hidden;border:1px solid rgba(157,91,255,.5);box-shadow:0 0 16px rgba(157,91,255,.3),0 0 44px rgba(157,91,255,.14),inset 0 0 0 1px rgba(0,234,255,.12)}
+.book-cover img{width:100%;height:100%;object-fit:cover;display:block;background:#0a0520}
+.book-cover svg,.product-thumb svg{filter:drop-shadow(0 0 6px currentColor)}
+
+.book-content{flex:1;display:flex;flex-direction:column;gap:10px}
+.book-title{font-size:.98rem;font-weight:800;color:#d9bcff;text-shadow:0 0 6px #9d5bff,0 0 14px #9d5bff88;letter-spacing:.03em}
+.book-desc{font-size:.84rem;font-weight:500;line-height:1.6;color:rgba(238,240,255,.88)}
+.book-btns{display:flex;flex-wrap:wrap;gap:8px}
+a.btn-p{color:#9d5bff;border-color:#9d5bff;background:rgba(157,91,255,.07);text-shadow:0 0 8px #9d5bff55;box-shadow:0 0 8px rgba(157,91,255,.12);font-size:.75rem;padding:7px 16px}
+a.btn-p:hover{background:rgba(157,91,255,.2);box-shadow:0 0 16px rgba(157,91,255,.45)}
+
+/* SOCIAL POSTS */
+.social-feed{display:flex;flex-direction:column;gap:14px}
+.social-post{border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+.post-x{border:1px solid rgba(0,234,255,.28);background:rgba(0,234,255,.04);box-shadow:0 0 14px rgba(0,234,255,.07)}
+.post-sub{border:1px solid rgba(255,43,214,.28);background:rgba(255,43,214,.04);box-shadow:0 0 14px rgba(255,43,214,.07)}
+.post-fb{border:1px solid rgba(157,91,255,.28);background:rgba(157,91,255,.04);box-shadow:0 0 14px rgba(157,91,255,.07)}
+.post-header{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.platform-badge{font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:3px 9px;border-radius:20px}
+.badge-x{color:#00eaff;border:1px solid rgba(0,234,255,.4);background:rgba(0,234,255,.08)}
+.badge-sub{color:#ff2bd6;border:1px solid rgba(255,43,214,.4);background:rgba(255,43,214,.08)}
+.badge-fb{color:#9d5bff;border:1px solid rgba(157,91,255,.4);background:rgba(157,91,255,.08)}
+.post-handle{font-size:.66rem;font-weight:600;color:rgba(238,240,255,.55);letter-spacing:.06em}
+.post-title-link{font-size:.92rem;font-weight:800;color:rgba(238,240,255,.97);margin-bottom:2px;text-decoration:none;display:block}
+.post-title-link:hover{text-decoration:underline;color:#ff6ee2}
+.post-text{font-size:.86rem;font-weight:500;line-height:1.7;color:rgba(238,240,255,.92)}
+.post-meta{font-size:.64rem;font-weight:600;color:rgba(238,240,255,.5);letter-spacing:.08em}
+
+/* SHOPIFY PRODUCTS */
+.shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.shop-card{border:1px solid rgba(0,234,255,.22);border-radius:12px;padding:16px;background:rgba(0,234,255,.03);box-shadow:0 0 14px rgba(0,234,255,.06);display:flex;flex-direction:column;gap:10px}
+.product-thumb{width:100%;aspect-ratio:1;border-radius:8px;border:1px solid rgba(0,234,255,.28);overflow:hidden;box-shadow:inset 0 0 24px rgba(0,0,0,.4),0 0 16px rgba(0,234,255,.12)}
+.product-thumb svg{display:block;width:100%;height:100%}
+.product-name{font-size:.92rem;font-weight:800;color:#9ff8ff;text-shadow:0 0 6px #00eaff,0 0 14px #00eaff66}
+.product-desc{font-size:.82rem;font-weight:500;line-height:1.6;color:rgba(238,240,255,.85);flex:1}
+.product-price{font-size:1rem;font-weight:800;color:#ff8ae8;text-shadow:0 0 7px #ff2bd6,0 0 16px #ff2bd666;letter-spacing:.04em}
+
+/* FOOTER */
+footer{font-size:.7rem;font-weight:600;letter-spacing:.2em;color:rgba(0,234,255,.55);text-transform:uppercase;padding-top:8px}
+
+/* RESPONSIVE */
+@media(max-width:500px){
+  .hero-row{flex-direction:column-reverse;align-items:center;gap:20px}
+  .title-block{text-align:center;align-items:center}
+  .hero-img{width:130px;height:185px}
+  .book-card{flex-direction:column;gap:14px;align-items:center;text-align:center}
+  .book-content{align-items:center}
+  .book-btns{justify-content:center}
+  .book-cover{width:150px;height:225px}
+  .shop-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO: title on left, portrait image on right -->
+  <div class="hero-row">
+    <div class="title-block">
+      <h1>Dylan From 2045</h1>
+      <div class="tagline">Reporting Back From the Future</div>
+    </div>
+    <div class="hero-img">
+      <img src="header.jpg" alt="Dylan From 2045" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="placeholder">header image</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-label">Find Me</div>
+    <div class="btn-row">
+      <a class="btn btn-m" href="https://x.com/dylan2045ad" target="_blank" rel="noopener">X / Twitter</a>
+      <a class="btn btn-m" href="https://www.facebook.com/61590758964026" target="_blank" rel="noopener">Facebook</a>
+      <a class="btn btn-m" href="https://substack.com/@dylan2045" target="_blank" rel="noopener">Substack</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">Latest Posts</div>
+    <div class="social-feed">
+
+      <div class="social-post post-x">
+        <div class="post-header">
+          <span class="platform-badge badge-x">X / Twitter</span>
+          <span class="post-handle">@dylan2045ad</span>
+        </div>
+        <div class="post-text">Just landed back from 2031. Hot tip: stop calling it "social media." In my era they just call it the archive of everything we got wrong. The good news? We course-corrected. The bad news? It took the Summer of 2026 to do it. #Dylan2045 #FutureReports</div>
+        <div class="post-meta">May 28, 2026 · 4.2K likes · 812 reposts</div>
+      </div>
+
+      <div class="social-post post-sub">
+        <div class="post-header">
+          <span class="platform-badge badge-sub">Substack</span>
+          <span class="post-handle">dylan2045</span>
+        </div>
+        <a class="post-title-link" href="https://substack.com/@dylan2045" target="_blank" rel="noopener">Why Wall Street Didn't See Summer 2026 Coming</a>
+        <div class="post-text">The signs were there. They always are. But when you're running models that can't price in collective disillusionment, the collapse looks random — until it doesn't. In this issue I break down the three signals even the smartest analysts in 2025 chose to ignore.</div>
+        <div class="post-meta">Jun 1, 2026 · 3 min read</div>
+      </div>
+
+      <div class="social-post post-fb">
+        <div class="post-header">
+          <span class="platform-badge badge-fb">Facebook</span>
+          <span class="post-handle">Dylan From 2045</span>
+        </div>
+        <div class="post-text">New book alert — "The Summer Reset of 2026" is officially live on Barnes &amp; Noble and Apple Books. If you've been following the reports from 2045, you know this one hits different. We're talking the first domino — the moment everything shifted. Grab a copy and let me know what you think in the comments.</div>
+        <div class="post-meta">Jun 2, 2026 · 216 likes · 47 shares</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">Listen &amp; Shop</div>
+    <div class="btn-row">
+      <a class="btn btn-c" href="https://suno.com/@dylan2045ad" target="_blank" rel="noopener">Suno Music</a>
+      <a class="btn btn-c" href="https://dylan2045ad.gumroad.com/" target="_blank" rel="noopener">Gumroad</a>
+      <a class="btn btn-c" href="https://payhip.com/Dylan2045ad" target="_blank" rel="noopener">Payhip</a>
+      <a class="btn btn-c" href="https://ko-fi.com/dylan2045ad" target="_blank" rel="noopener">Ko-fi</a>
+      <a class="btn btn-c" href="https://dylan2045ad.myshopify.com/" target="_blank" rel="noopener">Shop</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">From the Shop</div>
+    <div class="shop-grid">
+
+      <div class="shop-card">
+        <div class="product-thumb"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="teeBg" cx="50%" cy="40%" r="65%"><stop offset="0" stop-color="#0b2848"/><stop offset="1" stop-color="#040c1d"/></radialGradient><linearGradient id="teeFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0c1f40"/><stop offset="1" stop-color="#060f24"/></linearGradient></defs><rect width="200" height="200" fill="url(#teeBg)"/><path d="M84 48 C90 60 110 60 116 48 L126 52 L156 66 L150 92 L130 84 L134 160 L66 160 L70 84 L50 92 L44 66 L74 52 Z" fill="url(#teeFill)" stroke="#00eaff" stroke-width="2.6" stroke-linejoin="round"/><path d="M84 48 C90 60 110 60 116 48" fill="none" stroke="#00eaff" stroke-width="2.6"/><circle cx="100" cy="106" r="24" fill="none" stroke="#ff2bd6" stroke-width="2.2"/><circle cx="100" cy="106" r="16" fill="none" stroke="#9d5bff" stroke-width="1.4"/><path d="M104 92 L89 108 L99 108 L95 124 L111 104 L101 104 Z" fill="#00eaff" stroke="#00eaff" stroke-width="1" stroke-linejoin="round"/><text x="100" y="146" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="800" letter-spacing="2.5" fill="#7df6ff">2045</text></svg></div>
+        <div class="product-name">Time Traveler Tee</div>
+        <div class="product-desc">Soft unisex tee with the iconic Dylan From 2045 neon logo. A wardrobe staple for anyone tracking the future.</div>
+        <div class="product-price">$28.00</div>
+        <a class="btn btn-c" href="https://dylan2045ad.myshopify.com/" target="_blank" rel="noopener">View in Shop</a>
+      </div>
+
+      <div class="shop-card">
+        <div class="product-thumb"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="prSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050a30"/><stop offset=".5" stop-color="#3a0b5a"/><stop offset=".82" stop-color="#ff2bd6"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient><linearGradient id="prSun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff36b"/><stop offset=".55" stop-color="#ff5bb0"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient><linearGradient id="prFloor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a0a3a"/><stop offset="1" stop-color="#05021a"/></linearGradient><clipPath id="prScene"><rect x="24" y="24" width="152" height="152" rx="3"/></clipPath></defs><rect x="6" y="6" width="188" height="188" rx="7" fill="#0a0322" stroke="#9d5bff" stroke-width="2.4"/><rect x="14" y="14" width="172" height="172" rx="4" fill="none" stroke="#00eaff" stroke-width="1" opacity=".5"/><g clip-path="url(#prScene)"><rect x="24" y="24" width="152" height="94" fill="url(#prSky)"/><circle cx="100" cy="104" r="30" fill="url(#prSun)"/><g fill="#2d0b52"><rect x="70" y="101" width="60" height="2.4"/><rect x="70" y="107" width="60" height="3"/><rect x="70" y="113" width="60" height="3.6"/></g><g fill="#07021c"><rect x="24" y="86" width="12" height="32"/><rect x="37" y="72" width="9" height="46"/><rect x="47" y="92" width="11" height="26"/><rect x="59" y="80" width="7" height="38"/><rect x="67" y="98" width="6" height="20"/><rect x="127" y="98" width="6" height="20"/><rect x="134" y="80" width="8" height="38"/><rect x="143" y="70" width="10" height="48"/><rect x="155" y="90" width="9" height="28"/><rect x="165" y="84" width="11" height="34"/></g><rect x="24" y="118" width="152" height="58" fill="url(#prFloor)"/><line x1="24" y1="118" x2="176" y2="118" stroke="#ff2bd6" stroke-width="2" opacity=".85"/><g stroke="#00eaff" stroke-width="1" fill="none" opacity=".7"><line x1="24" y1="127" x2="176" y2="127"/><line x1="24" y1="138" x2="176" y2="138"/><line x1="24" y1="152" x2="176" y2="152"/><line x1="24" y1="170" x2="176" y2="170"/><line x1="100" y1="118" x2="-40" y2="176"/><line x1="100" y1="118" x2="20" y2="176"/><line x1="100" y1="118" x2="56" y2="176"/><line x1="100" y1="118" x2="80" y2="176"/><line x1="100" y1="118" x2="100" y2="176"/><line x1="100" y1="118" x2="120" y2="176"/><line x1="100" y1="118" x2="144" y2="176"/><line x1="100" y1="118" x2="180" y2="176"/><line x1="100" y1="118" x2="240" y2="176"/></g></g></svg></div>
+        <div class="product-name">Summer Reset Print</div>
+        <div class="product-desc">High-quality 11×14 art print from the graphic novel. Dystopian neon cityscape — ready to frame.</div>
+        <div class="product-price">$45.00</div>
+        <a class="btn btn-c" href="https://dylan2045ad.myshopify.com/" target="_blank" rel="noopener">View in Shop</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">Books For Sale</div>
+    <div class="books-grid">
+
+      <div class="book-card">
+        <div class="book-cover"><img src="cover-summer-reset.jpg" alt="The Summer Reset of 2026 — book cover" loading="lazy"></div>
+        <div class="book-content">
+          <div class="book-title">The Summer Reset of 2026</div>
+          <div class="book-desc">A gripping near-future tale of economic collapse and reinvention — as Wall Street's last empire crumbles in a sweltering summer that reshapes civilization.</div>
+          <div class="book-btns">
+            <a class="btn btn-p" href="https://www.barnesandnoble.com/w/the-summer-reset-of-2026-dylan-vaughn/1149532976?ean=2940184912912" target="_blank" rel="noopener">Barnes &amp; Noble</a>
+            <a class="btn btn-p" href="https://books.apple.com/us/book/the-summer-reset-of-2026-the-fall-of-wall/id6759535787" target="_blank" rel="noopener">Apple Books</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover"><img src="cover-tesla-boyfriend.jpg" alt="My $300 Tesla Boyfriend — book cover" loading="lazy"></div>
+        <div class="book-content">
+          <div class="book-title">My $300 Tesla Boyfriend: Better Than Grindr</div>
+          <div class="book-desc">A razor-sharp satire of modern dating — when the most honest relationship you can find costs $300 a month and runs on electricity. Funny, sharp, and oddly moving.</div>
+          <div class="book-btns">
+            <a class="btn btn-p" href="https://www.barnesandnoble.com/w/my-300-tesla-boyfriend-better-than-grindr-dylan-vaughn/1149528873?ean=2940184912899" target="_blank" rel="noopener">Barnes &amp; Noble</a>
+            <a class="btn btn-p" href="https://books.apple.com/us/book/my-%24300-tesla-boyfriend-better-than-grindr-my-life/id6759536627" target="_blank" rel="noopener">Apple Books I</a>
+            <a class="btn btn-p" href="https://books.apple.com/us/book/my-%24300-tesla-boyfriend-better-than-grindr-my-life/id6759536694" target="_blank" rel="noopener">Apple Books II</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover"><img src="cover-manga-summer-reset.jpg" alt="Manga — The Summer Reset of 2026 cover" loading="lazy"></div>
+        <div class="book-content">
+          <div class="book-title">Manga — The Summer Reset of 2026</div>
+          <div class="book-desc">The cinematic manga adaptation of the bestselling novel — bold art, electric color, and a dystopian summer brought to vivid life panel by panel.</div>
+          <div class="book-btns">
+            <a class="btn btn-p" href="https://www.barnesandnoble.com/w/manga-the-summer-reset-of-2026-dylan-vaughn/1149542093?ean=2940185004081" target="_blank" rel="noopener">Barnes &amp; Noble</a>
+            <a class="btn btn-p" href="https://books.apple.com/us/book/manga-the-summer-reset-of-2026/id6759538626" target="_blank" rel="noopener">Apple Books</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover"><img src="cover-manga-tesla-boyfriend.jpg" alt="Manga — My $300 Tesla Boyfriend cover" loading="lazy"></div>
+        <div class="book-content">
+          <div class="book-title">Manga — My $300 Tesla Boyfriend</div>
+          <div class="book-desc">The illustrated retelling of the cult favourite — expressive art and dry wit collide in this manga story of AI companionship, loneliness, and late-night drives.</div>
+          <div class="book-btns">
+            <a class="btn btn-p" href="https://www.barnesandnoble.com/w/manga-my-tesla-300-boyfriend-dylan-vaughn/1149542098?ean=2940185004111" target="_blank" rel="noopener">Barnes &amp; Noble</a>
+            <a class="btn btn-p" href="https://books.apple.com/us/book/manga-manga-my-%24300-tesla-boyfriend-better-than-grindr/id6759537288" target="_blank" rel="noopener">Apple Books</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>© Dylan2045ad</footer>
+
+</div>
+</body>
+</html>
