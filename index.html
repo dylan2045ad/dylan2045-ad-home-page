@@ -6,9 +6,9 @@
 <title>Dylan From 2045 — Reporting Back From the Future</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%2300d4ff' stroke-width='1' opacity='.4'%3E%3Cpath d='M0 34h64v-34M64 34v44h54v-44h102'/%3E%3Cpath d='M34 220v-56h66v34h74v-66h46'/%3E%3Cpath d='M0 110h34M110 0v34M176 220v-46M0 176h44v-34'/%3E%3Cpath d='M142 78v62h78'/%3E%3C/g%3E%3Cg fill='%2300eaff' opacity='.5'%3E%3Ccircle cx='64' cy='34' r='3'/%3E%3Ccircle cx='118' cy='34' r='3'/%3E%3Ccircle cx='100' cy='78' r='3'/%3E%3Ccircle cx='34' cy='110' r='3'/%3E%3Ccircle cx='174' cy='130' r='3'/%3E%3Ccircle cx='100' cy='164' r='3'/%3E%3Ccircle cx='44' cy='176' r='3'/%3E%3Ccircle cx='142' cy='78' r='3'/%3E%3C/g%3E%3C/svg%3E") repeat,radial-gradient(ellipse at 50% -8%,#0a4ba0 0%,transparent 58%),linear-gradient(160deg,#020a2e 0%,#031b54 45%,#012a6b 100%);background-attachment:fixed;color:#eef0ff;font-family:system-ui,-apple-system,sans-serif;font-weight:500;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:0 16px 56px}
-body::before{content:'';position:fixed;top:0;left:50%;transform:translateX(-50%);width:1000px;height:560px;background:radial-gradient(ellipse at 50% 0%,rgba(0,180,255,.5) 0%,transparent 70%);pointer-events:none;z-index:0}
-body::after{content:'';position:fixed;inset:0;background:linear-gradient(transparent 0%,rgba(2,10,46,.55) 100%);pointer-events:none;z-index:0}
+body{background:#0a1a3c;background-attachment:fixed;color:#eef0ff;font-family:system-ui,-apple-system,sans-serif;font-weight:500;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:0 16px 56px}
+body::before{display:none}
+body::after{display:none}
 .wrap{position:relative;z-index:1;width:100%;max-width:760px;display:flex;flex-direction:column;align-items:center;gap:36px}
 
 /* HERO ROW — title left, image right */
@@ -119,6 +119,16 @@ footer{font-size:.7rem;font-weight:600;letter-spacing:.2em;color:rgba(0,234,255,
   </section>
 
   <section>
+    <div class="section-label">Live Aggregators</div>
+    <div class="btn-row">
+      <a class="btn btn-c" href="https://osint-aggregator--dylan2045.replit.app/" target="_blank" rel="noopener">OSINT Aggregator</a>
+      <a class="btn btn-c" href="https://reddit-aggregator--dylanguu11.replit.app/" target="_blank" rel="noopener">Reddit Aggregator</a>
+      <a class="btn btn-c" href="https://dnu-dylan-new-york-updates--dylan2045aad.replit.app/" target="_blank" rel="noopener">NY Updates</a>
+      <a class="btn btn-c" href="https://ai-pulse-news--dylan2045ad.replit.app/" target="_blank" rel="noopener">AI Pulse News</a>
+    </div>
+  </section>
+
+  <section>
     <div class="section-label">Latest Posts</div>
     <div class="social-feed">
 
@@ -169,7 +179,6 @@ footer{font-size:.7rem;font-weight:600;letter-spacing:.2em;color:rgba(0,234,255,
     <div class="shop-grid">
 
       <div class="shop-card">
-        <div class="product-thumb"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="teeBg" cx="50%" cy="40%" r="65%"><stop offset="0" stop-color="#0b2848"/><stop offset="1" stop-color="#040c1d"/></radialGradient><linearGradient id="teeFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0c1f40"/><stop offset="1" stop-color="#060f24"/></linearGradient></defs><rect width="200" height="200" fill="url(#teeBg)"/><path d="M84 48 C90 60 110 60 116 48 L126 52 L156 66 L150 92 L130 84 L134 160 L66 160 L70 84 L50 92 L44 66 L74 52 Z" fill="url(#teeFill)" stroke="#00eaff" stroke-width="2.6" stroke-linejoin="round"/><path d="M84 48 C90 60 110 60 116 48" fill="none" stroke="#00eaff" stroke-width="2.6"/><circle cx="100" cy="106" r="24" fill="none" stroke="#ff2bd6" stroke-width="2.2"/><circle cx="100" cy="106" r="16" fill="none" stroke="#9d5bff" stroke-width="1.4"/><path d="M104 92 L89 108 L99 108 L95 124 L111 104 L101 104 Z" fill="#00eaff" stroke="#00eaff" stroke-width="1" stroke-linejoin="round"/><text x="100" y="146" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="800" letter-spacing="2.5" fill="#7df6ff">2045</text></svg></div>
         <div class="product-name">Time Traveler Tee</div>
         <div class="product-desc">Soft unisex tee with the iconic Dylan From 2045 neon logo. A wardrobe staple for anyone tracking the future.</div>
         <div class="product-price">$28.00</div>
@@ -177,7 +186,6 @@ footer{font-size:.7rem;font-weight:600;letter-spacing:.2em;color:rgba(0,234,255,
       </div>
 
       <div class="shop-card">
-        <div class="product-thumb"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="prSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050a30"/><stop offset=".5" stop-color="#3a0b5a"/><stop offset=".82" stop-color="#ff2bd6"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient><linearGradient id="prSun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff36b"/><stop offset=".55" stop-color="#ff5bb0"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient><linearGradient id="prFloor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a0a3a"/><stop offset="1" stop-color="#05021a"/></linearGradient><clipPath id="prScene"><rect x="24" y="24" width="152" height="152" rx="3"/></clipPath></defs><rect x="6" y="6" width="188" height="188" rx="7" fill="#0a0322" stroke="#9d5bff" stroke-width="2.4"/><rect x="14" y="14" width="172" height="172" rx="4" fill="none" stroke="#00eaff" stroke-width="1" opacity=".5"/><g clip-path="url(#prScene)"><rect x="24" y="24" width="152" height="94" fill="url(#prSky)"/><circle cx="100" cy="104" r="30" fill="url(#prSun)"/><g fill="#2d0b52"><rect x="70" y="101" width="60" height="2.4"/><rect x="70" y="107" width="60" height="3"/><rect x="70" y="113" width="60" height="3.6"/></g><g fill="#07021c"><rect x="24" y="86" width="12" height="32"/><rect x="37" y="72" width="9" height="46"/><rect x="47" y="92" width="11" height="26"/><rect x="59" y="80" width="7" height="38"/><rect x="67" y="98" width="6" height="20"/><rect x="127" y="98" width="6" height="20"/><rect x="134" y="80" width="8" height="38"/><rect x="143" y="70" width="10" height="48"/><rect x="155" y="90" width="9" height="28"/><rect x="165" y="84" width="11" height="34"/></g><rect x="24" y="118" width="152" height="58" fill="url(#prFloor)"/><line x1="24" y1="118" x2="176" y2="118" stroke="#ff2bd6" stroke-width="2" opacity=".85"/><g stroke="#00eaff" stroke-width="1" fill="none" opacity=".7"><line x1="24" y1="127" x2="176" y2="127"/><line x1="24" y1="138" x2="176" y2="138"/><line x1="24" y1="152" x2="176" y2="152"/><line x1="24" y1="170" x2="176" y2="170"/><line x1="100" y1="118" x2="-40" y2="176"/><line x1="100" y1="118" x2="20" y2="176"/><line x1="100" y1="118" x2="56" y2="176"/><line x1="100" y1="118" x2="80" y2="176"/><line x1="100" y1="118" x2="100" y2="176"/><line x1="100" y1="118" x2="120" y2="176"/><line x1="100" y1="118" x2="144" y2="176"/><line x1="100" y1="118" x2="180" y2="176"/><line x1="100" y1="118" x2="240" y2="176"/></g></g></svg></div>
         <div class="product-name">Summer Reset Print</div>
         <div class="product-desc">High-quality 11×14 art print from the graphic novel. Dystopian neon cityscape — ready to frame.</div>
         <div class="product-price">$45.00</div>
