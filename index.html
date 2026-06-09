@@ -6,7 +6,7 @@
 <title>Dylan From 2045 — Reporting Back From the Future</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#0a1a3c;background-attachment:fixed;color:#eef0ff;font-family:system-ui,-apple-system,sans-serif;font-weight:500;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:0 16px 56px}
+body{background:#050b1f;background-attachment:fixed;color:#eef0ff;font-family:system-ui,-apple-system,sans-serif;font-weight:500;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:0 16px 56px}
 body::before{display:none}
 body::after{display:none}
 .wrap{position:relative;z-index:1;width:100%;max-width:760px;display:flex;flex-direction:column;align-items:center;gap:36px}
@@ -69,14 +69,8 @@ a.btn-p:hover{background:rgba(157,91,255,.2);box-shadow:0 0 16px rgba(157,91,255
 .post-text{font-size:.86rem;font-weight:500;line-height:1.7;color:rgba(238,240,255,.92)}
 .post-meta{font-size:.64rem;font-weight:600;color:rgba(238,240,255,.5);letter-spacing:.08em}
 
-/* SHOPIFY PRODUCTS */
-.shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.shop-card{border:1px solid rgba(0,234,255,.22);border-radius:12px;padding:16px;background:rgba(0,234,255,.03);box-shadow:0 0 14px rgba(0,234,255,.06);display:flex;flex-direction:column;gap:10px}
-.product-thumb{width:100%;aspect-ratio:1;border-radius:8px;border:1px solid rgba(0,234,255,.28);overflow:hidden;box-shadow:inset 0 0 24px rgba(0,0,0,.4),0 0 16px rgba(0,234,255,.12)}
-.product-thumb svg{display:block;width:100%;height:100%}
-.product-name{font-size:.92rem;font-weight:800;color:#9ff8ff;text-shadow:0 0 6px #00eaff,0 0 14px #00eaff66}
-.product-desc{font-size:.82rem;font-weight:500;line-height:1.6;color:rgba(238,240,255,.85);flex:1}
-.product-price{font-size:1rem;font-weight:800;color:#ff8ae8;text-shadow:0 0 7px #ff2bd6,0 0 16px #ff2bd666;letter-spacing:.04em}
+/* AGGREGATOR INFO */
+.aggregator-info{font-size:.82rem;font-weight:500;line-height:1.7;color:rgba(238,240,255,.85);background:rgba(0,234,255,.05);border:1px solid rgba(0,234,255,.2);border-radius:8px;padding:14px 16px;margin-bottom:10px}
 
 /* FOOTER */
 footer{font-size:.7rem;font-weight:600;letter-spacing:.2em;color:rgba(0,234,255,.55);text-transform:uppercase;padding-top:8px}
@@ -90,7 +84,6 @@ footer{font-size:.7rem;font-weight:600;letter-spacing:.2em;color:rgba(0,234,255,
   .book-content{align-items:center}
   .book-btns{justify-content:center}
   .book-cover{width:150px;height:225px}
-  .shop-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -120,6 +113,7 @@ footer{font-size:.7rem;font-weight:600;letter-spacing:.2em;color:rgba(0,234,255,
 
   <section>
     <div class="section-label">Live Aggregators</div>
+    <div class="aggregator-info">Real-time data aggregators that pull insights from OSINT sources, Reddit discussions, New York news updates, and AI industry pulse. These tools surface emerging trends and patterns before mainstream coverage — exactly what a time traveler would use to stay ahead of the narrative.</div>
     <div class="btn-row">
       <a class="btn btn-c" href="https://osint-aggregator--dylan2045.replit.app/" target="_blank" rel="noopener">OSINT Aggregator</a>
       <a class="btn btn-c" href="https://reddit-aggregator--dylanguu11.replit.app/" target="_blank" rel="noopener">Reddit Aggregator</a>
@@ -132,32 +126,14 @@ footer{font-size:.7rem;font-weight:600;letter-spacing:.2em;color:rgba(0,234,255,
     <div class="section-label">Latest Posts</div>
     <div class="social-feed">
 
-      <div class="social-post post-x">
-        <div class="post-header">
-          <span class="platform-badge badge-x">X / Twitter</span>
-          <span class="post-handle">@dylan2045ad</span>
-        </div>
-        <div class="post-text">Just landed back from 2031. Hot tip: stop calling it "social media." In my era they just call it the archive of everything we got wrong. The good news? We course-corrected. The bad news? It took the Summer of 2026 to do it. #Dylan2045 #FutureReports</div>
-        <div class="post-meta">May 28, 2026 · 4.2K likes · 812 reposts</div>
-      </div>
-
       <div class="social-post post-sub">
         <div class="post-header">
           <span class="platform-badge badge-sub">Substack</span>
           <span class="post-handle">dylan2045</span>
         </div>
-        <a class="post-title-link" href="https://substack.com/@dylan2045" target="_blank" rel="noopener">Why Wall Street Didn't See Summer 2026 Coming</a>
-        <div class="post-text">The signs were there. They always are. But when you're running models that can't price in collective disillusionment, the collapse looks random — until it doesn't. In this issue I break down the three signals even the smartest analysts in 2025 chose to ignore.</div>
-        <div class="post-meta">Jun 1, 2026 · 3 min read</div>
-      </div>
-
-      <div class="social-post post-fb">
-        <div class="post-header">
-          <span class="platform-badge badge-fb">Facebook</span>
-          <span class="post-handle">Dylan From 2045</span>
-        </div>
-        <div class="post-text">New book alert — "The Summer Reset of 2026" is officially live on Barnes &amp; Noble and Apple Books. If you've been following the reports from 2045, you know this one hits different. We're talking the first domino — the moment everything shifted. Grab a copy and let me know what you think in the comments.</div>
-        <div class="post-meta">Jun 2, 2026 · 216 likes · 47 shares</div>
+        <a class="post-title-link" href="https://substack.com/@dylan2045" target="_blank" rel="noopener">The Infrastructure Nobody Talks About — But Should</a>
+        <div class="post-text">You see reports about AI, about market swings, about social upheaval. But nobody's mapping the actual infrastructure that's quietly reshaping everything beneath the surface. In this deep dive, I connect the dots between three seemingly unrelated systems and show you why they matter to your 2027. The pattern is already there — most people just aren't looking in the right places yet.</div>
+        <div class="post-meta">Jun 8, 2026 · 12 min read · 847 subscribers</div>
       </div>
 
     </div>
@@ -170,28 +146,7 @@ footer{font-size:.7rem;font-weight:600;letter-spacing:.2em;color:rgba(0,234,255,
       <a class="btn btn-c" href="https://dylan2045ad.gumroad.com/" target="_blank" rel="noopener">Gumroad</a>
       <a class="btn btn-c" href="https://payhip.com/Dylan2045ad" target="_blank" rel="noopener">Payhip</a>
       <a class="btn btn-c" href="https://ko-fi.com/dylan2045ad" target="_blank" rel="noopener">Ko-fi</a>
-      <a class="btn btn-c" href="https://dylan2045ad.myshopify.com/" target="_blank" rel="noopener">Shop</a>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-label">From the Shop</div>
-    <div class="shop-grid">
-
-      <div class="shop-card">
-        <div class="product-name">Time Traveler Tee</div>
-        <div class="product-desc">Soft unisex tee with the iconic Dylan From 2045 neon logo. A wardrobe staple for anyone tracking the future.</div>
-        <div class="product-price">$28.00</div>
-        <a class="btn btn-c" href="https://dylan2045ad.myshopify.com/" target="_blank" rel="noopener">View in Shop</a>
-      </div>
-
-      <div class="shop-card">
-        <div class="product-name">Summer Reset Print</div>
-        <div class="product-desc">High-quality 11×14 art print from the graphic novel. Dystopian neon cityscape — ready to frame.</div>
-        <div class="product-price">$45.00</div>
-        <a class="btn btn-c" href="https://dylan2045ad.myshopify.com/" target="_blank" rel="noopener">View in Shop</a>
-      </div>
-
+      <a class="btn btn-c" href="https://dylan2045ad.myshopify.com/" target="_blank" rel="noopener">Shopify</a>
     </div>
   </section>
 
