@@ -35,6 +35,8 @@ a.btn-m{color:#ff2bd6;border-color:#ff2bd6;background:rgba(255,43,214,.07);text-
 a.btn-m:hover{background:rgba(255,43,214,.18);box-shadow:0 0 18px rgba(255,43,214,.5)}
 a.btn-c{color:#00eaff;border-color:#00eaff;background:rgba(0,234,255,.07);text-shadow:0 0 8px #00eaff55;box-shadow:0 0 8px rgba(0,234,255,.12)}
 a.btn-c:hover{background:rgba(0,234,255,.18);box-shadow:0 0 18px rgba(0,234,255,.45)}
+a.btn-g{color:#00ff9d;border-color:#00ff9d;background:rgba(0,255,157,.07);text-shadow:0 0 8px #00ff9d55;box-shadow:0 0 8px rgba(0,255,157,.12)}
+a.btn-g:hover{background:rgba(0,255,157,.18);box-shadow:0 0 18px rgba(0,255,157,.45)}
 
 /* BOOK CARDS */
 .books-grid{display:flex;flex-direction:column;gap:18px}
@@ -70,7 +72,10 @@ a.btn-p:hover{background:rgba(157,91,255,.2);box-shadow:0 0 16px rgba(157,91,255
 .post-meta{font-size:.64rem;font-weight:600;color:rgba(238,240,255,.5);letter-spacing:.08em}
 
 /* AGGREGATOR INFO */
-.aggregator-info{font-size:.82rem;font-weight:500;line-height:1.7;color:rgba(238,240,255,.85);background:rgba(0,234,255,.05);border:1px solid rgba(0,234,255,.2);border-radius:8px;padding:14px 16px}
+.info{font-size:.82rem;font-weight:500;line-height:1.7;color:rgba(238,240,255,.85);border-radius:8px;padding:14px 16px}
+.info-c{background:rgba(0,234,255,.05);border:1px solid rgba(0,234,255,.2)}
+.info-m{background:rgba(255,43,214,.05);border:1px solid rgba(255,43,214,.2)}
+.info-g{background:rgba(0,255,157,.05);border:1px solid rgba(0,255,157,.2)}
 
 /* SHOPIFY PRODUCTS */
 .shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -114,6 +119,7 @@ footer{font-size:.7rem;font-weight:600;letter-spacing:.2em;color:rgba(0,234,255,
 
   <section>
     <div class="section-label">Find Me</div>
+    <div class="info info-m"><strong>X / Twitter</strong> — quick takes, breaking signals, and real-time threads from the future.<br><strong>Facebook</strong> — community updates, longer reflections, and conversation with followers.<br><strong>Substack</strong> — in-depth essays and newsletters delivered straight to your inbox.</div>
     <div class="btn-row">
       <a class="btn btn-m" href="https://x.com/dylan2045ad" target="_blank" rel="noopener">X / Twitter</a>
       <a class="btn btn-m" href="https://www.facebook.com/61590758964026" target="_blank" rel="noopener">Facebook</a>
@@ -123,7 +129,7 @@ footer{font-size:.7rem;font-weight:600;letter-spacing:.2em;color:rgba(0,234,255,
 
   <section>
     <div class="section-label">Live Aggregators</div>
-    <div class="aggregator-info">Real-time data aggregators that pull insights from OSINT sources, Reddit discussions, New York news updates, and AI industry pulse. These tools surface emerging trends and connect the dots across multiple data streams.</div>
+    <div class="info info-c"><strong>OSINT Aggregator</strong> — pulls open-source intelligence from across the public web into one real-time feed.<br><strong>Reddit Aggregator</strong> — tracks trending discussions and emerging signals from Reddit communities.<br><strong>NY Updates</strong> — surfaces the latest New York news and local developments as they break.<br><strong>AI Pulse News</strong> — monitors the AI industry for breakthroughs, launches, and shifting trends.</div>
     <div class="btn-row">
       <a class="btn btn-c" href="https://osint-aggregator--dylan2045.replit.app/" target="_blank" rel="noopener">OSINT Aggregator</a>
       <a class="btn btn-c" href="https://reddit-aggregator--dylanguu11.replit.app/" target="_blank" rel="noopener">Reddit Aggregator</a>
@@ -136,15 +142,6 @@ footer{font-size:.7rem;font-weight:600;letter-spacing:.2em;color:rgba(0,234,255,
     <div class="section-label">Latest Posts</div>
     <div class="social-feed">
 
-      <div class="social-post post-x">
-        <div class="post-header">
-          <span class="platform-badge badge-x">X / Twitter</span>
-          <span class="post-handle">@dylan2045ad</span>
-        </div>
-        <div class="post-text">Just landed back from 2031. Hot tip: stop calling it "social media." In my era they just call it the archive of everything we got wrong. The good news? We course-correct.</div>
-        <div class="post-meta">May 28, 2026 · 4.2K likes · 812 reposts</div>
-      </div>
-
       <div class="social-post post-sub">
         <div class="post-header">
           <span class="platform-badge badge-sub">Substack</span>
@@ -155,47 +152,18 @@ footer{font-size:.7rem;font-weight:600;letter-spacing:.2em;color:rgba(0,234,255,
         <div class="post-meta">Jun 8, 2026 · 12 min read · 847 subscribers</div>
       </div>
 
-      <div class="social-post post-fb">
-        <div class="post-header">
-          <span class="platform-badge badge-fb">Facebook</span>
-          <span class="post-handle">Dylan From 2045</span>
-        </div>
-        <div class="post-text">New book alert — "The Summer Reset of 2026" is officially live on Barnes &amp; Noble and Apple Books. If you've been following the reports from 2045, you know this story. Now you can read it in full.</div>
-        <div class="post-meta">Jun 2, 2026 · 216 likes · 47 shares</div>
-      </div>
-
     </div>
   </section>
 
   <section>
     <div class="section-label">Listen &amp; Shop</div>
+    <div class="info info-g"><strong>Suno Music</strong> — original AI-crafted tracks and soundscapes from 2045.<br><strong>Gumroad</strong> — digital downloads, guides, and exclusive drops.<br><strong>Payhip</strong> — ebooks and digital products for instant purchase.<br><strong>Ko-fi</strong> — support the work directly with tips and memberships.<br><strong>Shopify</strong> — the official store for prints, merch, and physical goods.</div>
     <div class="btn-row">
-      <a class="btn btn-c" href="https://suno.com/@dylan2045ad" target="_blank" rel="noopener">Suno Music</a>
-      <a class="btn btn-c" href="https://dylan2045ad.gumroad.com/" target="_blank" rel="noopener">Gumroad</a>
-      <a class="btn btn-c" href="https://payhip.com/Dylan2045ad" target="_blank" rel="noopener">Payhip</a>
-      <a class="btn btn-c" href="https://ko-fi.com/dylan2045ad" target="_blank" rel="noopener">Ko-fi</a>
-      <a class="btn btn-c" href="https://dylan2045ad.myshopify.com/" target="_blank" rel="noopener">Shopify</a>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-label">From the Shop</div>
-    <div class="shop-grid">
-
-      <div class="shop-card">
-        <div class="product-name">Time Traveler Tee</div>
-        <div class="product-desc">Soft unisex tee with the iconic Dylan From 2045 neon logo. A wardrobe staple for anyone tracking the future.</div>
-        <div class="product-price">$28.00</div>
-        <a class="btn btn-c" href="https://dylan2045ad.myshopify.com/" target="_blank" rel="noopener">View in Shop</a>
-      </div>
-
-      <div class="shop-card">
-        <div class="product-name">Summer Reset Print</div>
-        <div class="product-desc">High-quality 11×14 art print from the graphic novel. Dystopian neon cityscape — ready to frame.</div>
-        <div class="product-price">$45.00</div>
-        <a class="btn btn-c" href="https://dylan2045ad.myshopify.com/" target="_blank" rel="noopener">View in Shop</a>
-      </div>
-
+      <a class="btn btn-g" href="https://suno.com/@dylan2045ad" target="_blank" rel="noopener">Suno Music</a>
+      <a class="btn btn-g" href="https://dylan2045ad.gumroad.com/" target="_blank" rel="noopener">Gumroad</a>
+      <a class="btn btn-g" href="https://payhip.com/Dylan2045ad" target="_blank" rel="noopener">Payhip</a>
+      <a class="btn btn-g" href="https://ko-fi.com/dylan2045ad" target="_blank" rel="noopener">Ko-fi</a>
+      <a class="btn btn-g" href="https://dylan2045ad.myshopify.com/" target="_blank" rel="noopener">Shopify</a>
     </div>
   </section>
 
